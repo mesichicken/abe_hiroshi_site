@@ -37,17 +37,17 @@
 				background-image: url("main-visual-01.jpg");
 			}
 			
-			
+			/* 1000px以上でも縦長の画面の場合 */
 			.js-intro-wide .intro__image--no01 {
-				background-image: url("image.php-mveid=6.jpeg");
+				background-image: url("main-visual-05.jpg");
 			}
 			
 			.js-intro-wide .intro__image--no02 {
-				background-image: url("image.php-mveid=4.jpeg");
+				background-image: url("main-visual-04.jpg");
 			}
 			
 			.js-intro-wide .intro__image--no03 {
-				background-image: url("image.php-mveid=2.jpeg");
+				background-image: url("main-visual-02.jpg");
 			}
 			
 		}
@@ -55,15 +55,15 @@
 		@media only screen and (max-width:1000px) {
 			
 			.intro__image--no01 {
-				background-image: url("image.php-mveid=6.jpeg");
+				background-image: url("main-visual-05.jpg");
 			}
 			
 			.intro__image--no02 {
-				background-image: url("image.php-mveid=4.jpeg");
+				background-image: url("main-visual-04.jpg");
 			}
 			
 			.intro__image--no03 {
-				background-image: url("image.php-mveid=2.jpeg");
+				background-image: url("main-visual-02.jpg");
 			}
 			
 		}
@@ -184,7 +184,7 @@
 							</a>
 						</li>
 						<li class="intro__list">
-							<a href="#" target="_blank">
+							<a href="#" class="js-transit">
 								News
 							</a>
 						</li>
@@ -194,17 +194,17 @@
 							</a>
 						</li>
 						<li class="intro__list">
-							<a href="#" target="_blank">
+							<a href="#" class="js-transit">
 								Publication
 							</a>
                         </li>
                         <li class="intro__list">
-							<a href="#" target="_blank">
+							<a href="#" class="js-transit">
 								Photo
 							</a>
                         </li>
                         <li class="intro__list">
-							<a href="#" target="_blank">
+							<a href="#" class="js-transit">
 								Contact
 							</a>
 						</li>
@@ -216,15 +216,15 @@
 				<div class="intro__title">
 					<h1 class="intro__name">
 						<span>
-							<i>A</i><i>b</i><i>e</i>
+							<i>A</i><i>B</i><i>E</i>
 						</span>
 						<span>
-							<i>H</i><i>I</i><i>R</i><i>O</i><i>S</i><i>H</i><i>I</i>
+							<i>H</i><i>i</i><i>r</i><i>o</i><i>s</i><i>h</i><i>i</i>
 						</span>
 					</h1>
 					<p class="intro__label">
 						<span>
-							OFFICIAL SITE
+							official site
 						</span>
 					</p>
 				</div>
@@ -346,23 +346,44 @@
 			<footer class="footer">
 				<div class="footer__inner">
 
+                    <div class="sitename">
+                        <a href="index.html" class="js-transit js-indicate js-indicate-btin">
+                            <div class="sitename__text">
+                                ABE Hiroshi
+                            </div>
+                            <div class="sitename__text sitename__text--small">
+                                official site
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footer__link js-transit js-indicate js-indicate-btin">
+                        <ul>
+                            <li class="footer__nav__list"><a href="#">トップ</a></li>
+                            <li class="footer__nav__list"><a href="#">出演</a></li>
+                            <li class="footer__nav__list"><a href="#">出版物</a></li>
+                            <li class="footer__nav__list"><a href="#">写真</a></li>
+                            <li class="footer__nav__list"><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+
 					<div class="share">
 						<div class="share__label js-indicate js-indicate-btin">
 							SHARE
 						</div>
 						<ul class="share__lists">
 							<li class="share__list js-indicate js-indicate-btin">
-								<a href="https://twitter.com/share?url=http://www.satohtakeru.com&text=%E4%BD%90%E8%97%A4%E5%81%A5%20%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B7%E3%83%A3%E3%83%AB%20%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%EF%BD%9CTakeru%20Satoh%20Official%20Website" rel="nofollow" target="_blank">
+								<a href="#" rel="nofollow" target="_blank">
 									<img src="assets/img/common/share_twitter.png" alt="Twitter" width="36" height="36">
 								</a>
 							</li>
 							<li class="share__list js-indicate js-indicate-btin">
-								<a href="http://www.facebook.com/share.php?u=http://www.satohtakeru.com" rel="nofollow" target="_blank">
+								<a href="#" rel="nofollow" target="_blank">
 									<img src="assets/img/common/share_facebook.png" alt="Facebook" width="36" height="36">
 								</a>
 							</li>
 							<li class="share__list js-indicate js-indicate-btin">
-								<a href="https://social-plugins.line.me/lineit/share?url=http://www.satohtakeru.com" rel="nofollow" target="_blank">
+								<a href="#" rel="nofollow" target="_blank">
 									<img src="assets/img/common/share_line.png" alt="LINE" width="36" height="36">
 								</a>
 							</li>
@@ -373,12 +394,7 @@
 						<img src="assets/img/common/pageup.png" alt="" width="25" height="14">
 					</div>
 
-					<div class="footer__columns">
-						<div class="footer__column">
-							<a href="https://www.amuse.co.jp/policy/privacy.html" target="_blank">
-								PRIVACY POLICY
-							</a>
-						</div>
+					<div class="footer__column__container">
 						<div class="footer__column">
 							2020&copy;ABE Hiroshi official site
 						</div>
@@ -401,10 +417,6 @@
 		<script src="assets/js/common-20200511.js"></script>
 		<script>
 			intro.ready();
-			// checkit.ready();
-			// staffreport.ready();
-			// collections.ready();
-			// modal.ready();
 		</script>
 
 	</body>
