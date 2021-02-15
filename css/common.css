@@ -1250,7 +1250,6 @@ a {
 		border-width: 100vh 0 0 60px;
 	}
 	.loading__title {
-		flex-direction: column;
 		font-size: 24px;
 	}
 	.loading__title span {
@@ -1259,7 +1258,6 @@ a {
 	}
 	.loading__title span:last-child {
 		text-indent: 0.95em;
-		letter-spacing: 0.95em;
 	}
 
 
