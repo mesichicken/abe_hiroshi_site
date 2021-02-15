@@ -608,7 +608,41 @@
 }
 
 
-/* mobile
+/* スマホ限定のスタイル */
+@media only screen and (max-width: 599px) {
+    .intro__nav {
+		display: none;
+	}
+    .intro__title {
+        width: 266px !important;
+    }
+    .intro__name span {
+        font-size: 40px !important;
+    }
+    .intro__label {
+        font-size: 20px !important;
+    }
+
+    /* profileenter
+	----------------------------------------------- */
+    .profileenter__title {
+        left: 77% !important;
+    }
+    .profileenter__detail {
+        width: 90%;
+        padding: 50px;
+    }
+    .profileenter__detail__lists ul {
+        margin-top: 90px;
+        margin-bottom: 20px;
+    }
+    .profileenter__detail__lists ul li {
+        font-size: 16px;
+    }
+}
+
+
+/* 1000px以下のときの共通スタイル
 ----------------------------------------------- */
 
 @media only screen and (max-width:1000px) {
@@ -637,7 +671,7 @@
 		background-image: url("../images/main-visual-02.jpg");
 	}
 	.intro__nav {
-		display: none;
+		/* display: none; */
 	}
 	.intro__title {
         width: 396px;
@@ -656,43 +690,6 @@
 	}
 
 
-	/* checkit
-	----------------------------------------------- */
-	
-	.checkit {
-		padding: 94px 0 0;
-		text-align: left;
-	}
-	.checkit__inner {
-		margin: auto;
-		width: auto;
-	}
-	.checkit__title {
-		margin: 0 25px;
-		font-size: 30px;
-	}
-	.checkit__slider {
-		margin: 27px 0 0 25px;
-	}
-	.checkit__list a {
-		margin: 0 4vw 0 0;
-		width: 80vw;
-	}
-	.checkit__arrow {
-		display: none;
-	}
-
-	/* small */
-
-	.checkit__slider--small {
-		margin: 38px 0 0 25px;
-	}
-	.checkit__slider--small .checkit__list a {
-		margin: 0 4vw 0 0;
-		width: 38vw;
-	}
-
-
 	/* news
 	----------------------------------------------- */
 	
@@ -707,20 +704,24 @@
 		position: relative;
 		padding: 0 0 6px;
 		width: auto;
-		font-size: 30px;
+        text-align: center;
+		font-size: 33px;
 		z-index: 1;
+        margin-bottom: 100px;
+        letter-spacing: 0.15em;
 	}
-	.news__title:after {
-		display: block;
-		content: "";
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		height: 1px;
-		background-color: #000;
-		z-index: 1;
-	}
+    .news__title:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 60px 0 0 -35px;
+        width: 70px;
+        height: 2px;
+        background-color: #000;
+        z-index: 1;
+    }
 	.news__lists {
 		margin: 30px 0 0;
 		width: auto;
@@ -750,7 +751,6 @@
 	
 	.news .more {
 		padding: 26px 0 0;
-		text-align: center;
 	}
 
 	/* ready */
@@ -779,8 +779,8 @@
 		height: auto;
 	}
 	.profileenter__title {
-		top: -95px;
-		left: 75.7%;
+		top: -45px;
+		left: 78.7%;
 		font-size: 30px;
 		line-height: 35px;
 	}
@@ -796,7 +796,9 @@
 	.profileenter__image span {
 		background-image: url("../images/profile_image.jpg");
 	}
-
+    .profileenter__detail {
+        top: 300px;
+    }
 
 }
 	
