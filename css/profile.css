@@ -5,7 +5,7 @@
 
 .profile {
 	margin: auto;
-	width: 980px;
+	max-width: 1000px;
 }
 .profile__title {
 	display: none;
@@ -16,15 +16,57 @@
 }
 .profile__column:first-child {
 	width: 280px;
+    margin-right: 40px;
 }
 .profile__column:last-child {
 	width: 590px;
+}
+.profile__image {
+    margin-bottom: 60px;
+    z-index: 1;
+}
+.profile__image span.image__box {
+    position: relative;
+    display: block;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 1;
+}
+.profile__image span.abe__image {
+    display: block;
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+    background-position: top;
+	background-size: cover;
+	overflow: hidden;
+    background-image: url("../images/profile_contents_image.jpg");
+    z-index: 1;
+}
+.profile__image span.abe__image:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    opacity: 0;
+    z-index: 1;
 }
 .profile__name {
 	color: #0A0A0A;
 	font-family: "Noto Serif JP", serif;
 	font-size: 35px;
 	letter-spacing: 0.18em;
+    text-align: center;
 }
 .profile__name small {
 	display: block;
@@ -59,7 +101,7 @@
 }
 .profile__data th {
 	width: 28%;
-	color: #868686;
+	color: #464646;
 }
 .profile__data td {
 	width: 72%;
@@ -68,32 +110,54 @@
 	font-weight: 500;
 	border-left: 1px solid #E2E2E2;
 }
-.profile__text {
+.profile__section {
+    margin-bottom: 50px;
+}
+.profile__section h2{
+    color: #0A0A0A;
+    font-family: "Noto Serif JP", serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile__text, .profile__award__list {
 	font-size: 13px;
 	text-align: justify;
 	letter-spacing: 0.02em;
 	line-height: 26px;
-	margin-top:20px;
 }
-.profile__text:first-child {
-	margin: -5px 0 0;
+.profile__award__list {
+    list-style-type: disc;
 }
+.profile__award__list li {
+    display: list-item; /* liタグはdisplay:blockだと点が表示されない */
+    list-style-type: none;
+    line-height: 26px;
+}
+.profile__award__list li:before {
+    content: '';
+    width: 2px;
+    height: 2px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    position: relative;
+    left: -10px;
+    top: -3px;
+}
+
 
 
 /* pc
 ----------------------------------------------- */
-
 @media print, screen and (min-width:1000px) {
-
-    
 }
 
 
 
-/* mobile
+/* スマホ限定のスタイル
 ----------------------------------------------- */
-
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 599px) {
 
     /* profile
 	----------------------------------------------- */
@@ -105,17 +169,27 @@
 	.profile__columns {
 		display: block;
 	}
+    .profile__column:first-child {
+        margin-right: 0;
+    }
+    .profile__column:last-child {
+        margin-top: 70px;
+    }
 	.profile__column:first-child,
 	.profile__column:last-child {
 		width: auto;
 	}
+    .profile__image span.image__box {
+        margin: 0 auto;
+        width: 240px;
+        height: 240px;
+    }
 	.profile__name {
 		font-size: 30px;
 		letter-spacing: 0.18em;
 	}
 	.profile__name small {
-		display: inline-block;
-		margin: 0 0 0 3px;
+		margin: 14px 0 0 0;
 		font-size: 16px;
 		letter-spacing: 0.13em;
 	}
@@ -135,8 +209,10 @@
 		width: 75%;
 		padding-left: 12px;
 	}
+    .profile__section h2{
+        font-size: 24px;
+    }
 	.profile__text {
-		margin: 25px 0 0;
 		font-size: 14px;
 		line-height: 25px;
 	}
@@ -144,4 +220,43 @@
 		margin: 90px 0 0;
 	}
 
+}
+
+/* タブレット限定のレイアウト
+----------------------------------------------- */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .profile {
+        padding: 0 20px !important;
+    }
+    .profile__column:first-child {
+        width: 240px;
+    }
+    .profile__column:last-child {
+        width: 400px;
+    }
+    .profile__image span.image__box {
+        width: 240px;
+        height: 240px;
+    }
+    .profile__name {
+		font-size: 30px;
+		letter-spacing: 0.18em;
+	}
+	.profile__name small {
+		font-size: 16px;
+		letter-spacing: 0.13em;
+	}
+    .profile__section h2{
+        font-size: 24px;
+    }
+}
+
+/* 1000px以下のときの共通スタイル
+----------------------------------------------- */
+
+@media only screen and (max-width: 1000px) {
+    .profile {
+        padding: 0 10px;
+    }
+    
 }

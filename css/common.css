@@ -279,10 +279,9 @@ a {
 .sitename--pagetitle .sitename__text {
 	color: #fff;
 	font-size: 16px;
-	letter-spacing: 0.48em;
+	letter-spacing: 0.1em;
 }
 .sitename--pagetitle .sitename__text--small {
-	margin: 11px 0 0 -1px;
 	font-size: 10px;
 	letter-spacing: 0.15em;
 }
@@ -1248,7 +1247,7 @@ a {
     .footer__inner .sitename__text {
         font-size: 30px !important;
     }
-    .sitename__text.sitename__text--small {
+    .footer__inner .sitename__text.sitename__text--small {
         font-size: 15px !important;
     }
 
@@ -1373,19 +1372,11 @@ a {
 		font-size: 14px;
 	}
 	.sitename__text--small {
-		margin: 5px 0 0 -1px;
 		font-size: 10px;
-		letter-spacing: 0.15em;
+		letter-spacing: 0.1em;
 	}
 
-	/* pagetitle */
-	
-	.sitename--pagetitle .sitename__text {
-		letter-spacing: 0.3em;
-	}
-	.sitename--pagetitle .sitename__text--small {
-		margin: 8px 0 0 -1px;
-	}
+
 
 
 	/* share

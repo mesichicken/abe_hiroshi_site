@@ -333,7 +333,7 @@ var parallax = {
 			let rect = elem.getBoundingClientRect();
 			let offset = rect.top + pagetop;
 			let height = elem.clientHeight;
-			let move = height / 5;
+			let move = height / 2;
 
 			parallax.pramas[i].offset = offset;
 			parallax.pramas[i].height = height;
