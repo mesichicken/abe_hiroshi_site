@@ -607,6 +607,10 @@ a {
 .current--profile .pagetitle__label {
 	letter-spacing: 0.15em;
 }
+.current--news .pagetitle__text,
+.current--news .pagetitle__label {
+	/* letter-spacing: 0.1em; */
+}
 
 /* ready */
 
@@ -1303,10 +1307,10 @@ a {
 
 	/* current */
 
-	.current--information .nav__list--information a:after,
+	/* .current--information .nav__list--information a:after,
 	.current--profile .nav__list--profile a:after{
 		transform: scaleX(1);
-	}
+	} */
 
 	/* ready */
 

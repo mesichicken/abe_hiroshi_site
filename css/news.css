@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* news
+----------------------------------------------- */
+.news__title {
+    display: none;
+}
+
+.news {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news__lists {
+}
+.news__lists li a {
+    display: block;
+    position: relative;
+    padding-bottom: 20px;
+}
+.news__lists li a:before,
+.news__lists li a:after {
+    display: block;
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background-color: #919090;
+	z-index: 1;
+}
+.news__lists li a:after {
+	transform: translateX(-250%);
+}
+.news__lists li a,
+.news__lists li a:before,
+.news__lists li a:after {
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+.news__lists li a {
+    transition-duration: 0.25s;
+}
+/* .news__lists li a:hover:before {
+    transform: translateX(250%);
+}
+.news__lists li a:hover:after {
+    transform: translateX(0);
+} */
+.news__lists li:nth-child(1) {
+	margin-bottom: 8px;
+}
+.news__list {
+	margin: 0 0 7px;
+	font-size: 14px;
+	font-weight: 500;
+	/* text-overflow: ellipsis; */
+	letter-spacing: 0.02em;
+	line-height: 18px;
+	overflow: hidden;
+}
+.news__list a {
+	display: inline-block;
+	padding: 10px 0 5px 0;
+	color: #272727;
+	text-decoration: none;
+}
+.news__list time {
+	display: block;
+	width: 85px;
+	color: #919090;
+    margin-bottom: 5px;
+}
+.news__list span {
+	display: inline-block;
+	letter-spacing: 0.08em;
+}
+.news__list span .caution{
+    display: inline;
+    color: #f00;
+}
+
+/* indicate */
+
+.js-indicate-start.news__list:nth-child(1) {
+	animation-delay: 0s;
+}
+.js-indicate-start.news__list:nth-child(2) {
+	animation-delay: 0.05s;
+}
+.js-indicate-start.news__list:nth-child(3) {
+	animation-delay: 0.1s;
+}
+.js-indicate-start.news__list:nth-child(4) {
+	animation-delay: 0.15s;
+}
+.js-indicate-start.news__list:nth-child(5) {
+	animation-delay: 0.2s;
+}
+.js-indicate-start.news__list:nth-child(6) {
+	animation-delay: 0.25s;
+}
+
+/* スマホ限定のスタイル */
+@media only screen and (max-width: 599px) {
+    .news__list {
+        margin: 0 0 7px;
+    }
+}
+
+
+/* 1000px以下のときの共通スタイル
+----------------------------------------------- */
+
+@media only screen and (max-width:1000px) {
+    .news {
+        padding: 0 20px;
+    }
+}
