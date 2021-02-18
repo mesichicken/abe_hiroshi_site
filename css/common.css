@@ -484,7 +484,6 @@ a {
     pointer-events: auto;
 }
 .nav__list {
-	margin: 0 11px;
 	font-family: "Crimson Text", serif;
 	font-size: 15px;
 	letter-spacing: 0.045em;
@@ -1367,6 +1366,11 @@ a {
 	.loading__title span:last-child {
 		text-indent: 0.95em;
 	}
+
+    /* nav */
+    .nav__lists {
+        padding: 0 20px;
+    }
 
 
 	/* sitename
