@@ -753,52 +753,6 @@ var pagetitle = {
 };
 
 
-/* information
------------------------------------------------ */
-
-var information = {
-	ready:function() {
-
-		jsinformation = document.getElementsByClassName("js-information")[0];
-
-		resize.params.information = information.resize;
-		
-		information.resize();
-
-	},
-	resize:function() {
-
-		if (resize.width >= breakpoint) {
-			$(jsinformation).find(".category").show();
-		}
-		else {
-			$(jsinformation).find(".category").hide();
-		}
-
-		jsinformation.querySelector(".information__current").classList.remove("information__current--open");
-		jsinformation.querySelector(".information__current").addEventListener("click", information.open, false);
-		jsinformation.querySelector(".information__current").removeEventListener("click", information.close, false);
-
-	},
-	open:function() {
-
-		$(jsinformation).find(".category").clearQueue().stop().slideDown(500, "easeInOutCubic");
-
-		jsinformation.querySelector(".information__current").classList.add("information__current--open");
-		jsinformation.querySelector(".information__current").removeEventListener("click", information.open, false);
-		jsinformation.querySelector(".information__current").addEventListener("click", information.close, false);
-
-	},
-	close:function() {
-
-		$(jsinformation).find(".category").clearQueue().stop().slideUp(500, "easeInOutCubic");
-
-		jsinformation.querySelector(".information__current").classList.remove("information__current--open");
-		jsinformation.querySelector(".information__current").addEventListener("click", information.open, false);
-		jsinformation.querySelector(".information__current").removeEventListener("click", information.close, false);
-
-	}
-};
 
 
 /* modal

@@ -374,6 +374,9 @@ a {
     margin-top: 10px;
 	z-index: 1;
 }
+.header .sitename a:hover {
+    color: #fff;
+}
 
 /* ready */
 
@@ -737,24 +740,6 @@ a {
 .js-pagetitle-end .pagetitle__image img {
 	transition: none;
 }
-/*
-.js-pagetitle-end .pagetitle__label,
-.js-pagetitle-end .pagetitle__label span,
-.js-pagetitle-end .pagetitle__image,
-.js-pagetitle-end .pagetitle__image img {
-	transform: translateY(-110vh);
-	transition-property: transform;
-	transition-duration: 2s;
-	transition-delay: 0s;
-	transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-}
-.js-pagetitle-end .pagetitle__image img {
-	transform: translateY(50vh);
-}
-.js-pagetitle-end .pagetitle__label span {
-	transform: translateY(110vh);
-}
-*/
 
 
 
@@ -1025,6 +1010,7 @@ a {
 	.header .sitename {
 		top: 12px;
 		left: 16px;
+        margin-top: 15px;
 	}
 
     /* menu
